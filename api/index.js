@@ -6,7 +6,13 @@ const dotenv = require("dotenv");
 const app = express();
 const port = 3000;
 const cors = require("cors");
-app.use(cors());
+app.use(cors(
+  {
+    origin: ["https://cabbit-rnto-frontend.vercel.app"],
+    methods: ["POST","GET"],
+    credentials: true,
+  }
+));
 dotenv.config();
 
 app.use(bodyParser.urlencoded({ extended: false }));
