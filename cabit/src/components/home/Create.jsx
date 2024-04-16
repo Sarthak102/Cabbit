@@ -45,7 +45,7 @@ const Create = () => {
       };
 
       const response = await axios.post(
-        "http://192.168.64.1:3000/habits",
+        "https://cabbit-sarthak-kambles-projects.vercel.app/habits",
         habitDetails
       );
 

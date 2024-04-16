@@ -26,7 +26,7 @@ const Index = () => {
 
   const fetchHabits = async () => {
     try {
-      const response = await axios.get("http://192.168.64.1:3000/habitslist");
+      const response = await axios.get("https://cabbit-sarthak-kambles-projects.vercel.app/habitslist");
       setHabits(response.data);
     } catch (error) {
       console.log("error fetching habits", error);
@@ -51,7 +51,7 @@ const Index = () => {
         [currentDay]: true,
       };
 
-      await axios.put(`http://192.168.64.1:3000/habits/${habitId}/completed`, {
+      await axios.put(`https://cabbit-sarthak-kambles-projects.vercel.app/habits/${habitId}/completed`, {
         completed: updatedCompletion,
       });
 
@@ -72,7 +72,7 @@ const Index = () => {
       const habitId = selectedHabit._id;
 
       const response = await axios.delete(
-        `http://192.168.64.1:3000/habits/${habitId}`
+        `https://cabbit-sarthak-kambles-projects.vercel.app/habits/${habitId}`
       );
 
       setHabits((prevHabits) =>

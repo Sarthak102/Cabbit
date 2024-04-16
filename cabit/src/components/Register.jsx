@@ -10,7 +10,7 @@ export const Register = () => {
     const navigate = useNavigate();
     const handleSignUp = async () => {
       try {
-        const response = await fetch(`http://192.168.64.1:3000/signup`, {
+        const response = await fetch(`https://cabbit-sarthak-kambles-projects.vercel.app/signup`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
